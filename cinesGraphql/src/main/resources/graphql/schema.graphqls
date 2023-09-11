@@ -1,0 +1,29 @@
+scalar Date
+
+type Query {
+  listarCines: [Cine]
+  #listarCine(id_cine: int) : Cine
+  listarEntradas: [Entrada]
+}
+
+
+type Cine {
+  id_cine: ID
+  ci_nombre: String
+  ci_calle: String
+  ci_capacidad: Int
+  ci_lista: [Entrada]
+}
+
+type Entrada {
+  id_entrada: ID
+  ent_fecha:Date
+  ent_cine:Cine
+  ent_numero:Int
+  idCliente:String
+ }
+ 
+ 
+ 
+
+
